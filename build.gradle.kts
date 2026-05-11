@@ -24,6 +24,10 @@ tasks.test {
     useJUnitPlatform()
 }
 
+kotlin {
+    jvmToolchain(25)
+}
+
 tasks.register("repeatTests") {
     group = "verification"
     description = "Runs the test suite 20 times to expose flaky tests"
